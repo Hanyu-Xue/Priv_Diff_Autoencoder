@@ -11,7 +11,7 @@ A CVPR 2022 (ORAL) paper ([paper](https://openaccess.thecvf.com/content/CVPR2022
 }
 ```
 
-## Usage (Please have a try with the inference to familiar with the code - Hanyu)
+## Usage ( ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) Optional: Please have a try with the inference to familiar with the code - Hanyu)
 
 ⚙️ Try a Colab walkthrough: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1OTfwkklN-IEd4hFk4LnweOleyDtS4XTh/view?usp=sharing)
 
@@ -19,7 +19,7 @@ A CVPR 2022 (ORAL) paper ([paper](https://openaccess.thecvf.com/content/CVPR2022
 
 Note: Since we expect a lot of changes on the codebase, please fork the repo before using.
 
-### Prerequisites (001 This is our first step - Hanyu)
+### Prerequisites ( ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 001 This is our first step - Hanyu)
 
 See `requirements.txt`
 
@@ -60,7 +60,7 @@ Using <code>manipulate.ipynb</code><br><img src="imgs_manipulated/sandy-wavyhair
 </table>
 
 
-### Checkpoints (002 This is our second step, download all pretrained models - Hanyu)
+### Checkpoints ( ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 002 This is our second step, download all pretrained models - Hanyu)
 
 We provide checkpoints for the following models:
 
@@ -84,7 +84,7 @@ checkpoints/
 ```
 
 
-### LMDB Datasets (003 This is our third step, Download FFHQ dataset LMDB version for test - Hanyu)
+### LMDB Datasets ( ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 003 This is our third step, Download FFHQ dataset LMDB version for test - Hanyu)
 
 We do not own any of the following datasets. We provide the LMDB ready-to-use dataset for the sake of convenience.
 
@@ -106,7 +106,7 @@ datasets/
 ```
 
 You can also download from the original sources, and use our provided codes to package them as LMDB files.
-Original sources for each dataset is as follows: (This is too big! Please dont. - Hanyu)
+Original sources for each dataset is as follows: (![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) This is too big! Please dont. - Hanyu)
 
 - FFHQ (https://github.com/NVlabs/ffhq-dataset)
 - CelebAHQ (https://github.com/switchablenorms/CelebAMask-HQ)
@@ -126,7 +126,7 @@ data_resize_horse.py
 Google drive: https://drive.google.com/drive/folders/1abNP4QKGbNnymjn8607BF0cwxX2L23jh?usp=sharing
 
 
-## Training (004 This is the last step for testing! See configure file for more details, modify the configure to fulfill our needs - Hanyu)
+## Training ( ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 004 This is the last step for testing! See configure file for more details, modify the configure to fulfill our needs - Hanyu)
 
 We provide scripts for training & evaluate DDIM and DiffAE (including latent DPM) on the following datasets: FFHQ128, FFHQ256, Bedroom128, Horse128, Celeba64 (D2C's crop).
 Usually, the evaluation results (FID's) will be available in `eval` directory.
@@ -135,7 +135,7 @@ Note: Most experiment requires at least 4x V100s during training the DPM models 
 
 
 
-**FFHQ128** (We can start from here. - Hanyu)
+**FFHQ128** ( ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) We can start from here. - Hanyu)
 ```
 # diffae
 python run_ffhq128.py
@@ -148,7 +148,7 @@ A classifier (for manipulation) can be trained using:
 python run_ffhq128_cls.py
 ```
 
-**FFHQ256** (I think this training will be too heavy. It needs 8 X V100s?! Try this later. - Hanyu)
+**FFHQ256** ( ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) I think this training will be too heavy. It needs 8 X V100s?! Try this later. - Hanyu)
 
 We only trained the DiffAE due to high computation cost.
 This requires 8x V100s.
