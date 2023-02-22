@@ -791,20 +791,20 @@ class GaussianDiffusionBeatGans:
                 _kwargs = model_kwargs
 
             t = th.tensor([i] * len(img), device=device)
-            with th.no_grad():
-                out = self.ddim_sample(
-                    model,
-                    img,
-                    t,
-                    clip_denoised=clip_denoised,
-                    denoised_fn=denoised_fn,
-                    cond_fn=cond_fn,
-                    model_kwargs=_kwargs,
-                    eta=eta,
-                )
-                out['t'] = t
-                yield out
-                img = out["sample"]
+#             with th.no_grad():
+            out = self.ddim_sample(
+                model,
+                img,
+                t,
+                clip_denoised=clip_denoised,
+                denoised_fn=denoised_fn,
+                cond_fn=cond_fn,
+                model_kwargs=_kwargs,
+                eta=eta,
+            )
+            out['t'] = t
+            yield out
+            img = out["sample"]
 
     def _vb_terms_bpd(self,
                       model: Model,
