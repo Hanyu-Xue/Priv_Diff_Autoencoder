@@ -1,3 +1,9 @@
+# New update (2023/03/14)
+
+Please download the new model from google drive and put them into the folder checkpoints:
+1. mlp model (https://drive.google.com/drive/folders/1MugUVHGn45eGklW7vJYvVjWm9eHLPRrr?usp=share_link)
+2. attr model (https://drive.google.com/drive/folders/1fH4W9zNcxdB33N7pM3ORy2z4nDIIRwE2?usp=share_link)
+
 # Official implementation of Diffusion Autoencoders
 
 A CVPR 2022 (ORAL) paper ([paper](https://openaccess.thecvf.com/content/CVPR2022/html/Preechakul_Diffusion_Autoencoders_Toward_a_Meaningful_and_Decodable_Representation_CVPR_2022_paper.html), [site](https://diff-ae.github.io/), [5-min video](https://youtu.be/i3rjEsiHoUU)):
@@ -192,3 +198,4 @@ This experiment can be run on 2080Ti's.
 # diffae
 python run_celeba64.py
 ```
+
