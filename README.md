@@ -1,8 +1,14 @@
 # New update (2023/03/14)
 
-Please download the new model from google drive and put them into the folder checkpoints:
+Please download the new model params from google drive and put them into the folder checkpoints:
 1. mlp model (https://drive.google.com/drive/folders/1MugUVHGn45eGklW7vJYvVjWm9eHLPRrr?usp=share_link)
 2. attr model (https://drive.google.com/drive/folders/1fH4W9zNcxdB33N7pM3ORy2z4nDIIRwE2?usp=share_link)
+
+Please download the model LatentMapperNew.py from disentanglement/Models/.
+
+please download the New_train.ipynb.
+
+Run the code in New_train.ipynb. (If you are running the code locally, pleae ignore the colab opertations, for example, Mount drive and install all packages.)
 
 # Official implementation of Diffusion Autoencoders
 
