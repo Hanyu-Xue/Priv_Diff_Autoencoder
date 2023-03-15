@@ -1,4 +1,4 @@
-'''''
+```
 def batch_generator(image_data, batch_size=32):
     batch_data = []
     for idx, data in enumerate(image_data):
@@ -15,7 +15,7 @@ def batch_generator(image_data, batch_size=32):
                 batch_data = []
     if batch_data:
         yield batch_data
-''''
+```
 
 # New update (2023/03/15)
 
