@@ -1,3 +1,7 @@
+# New update (2023/03/15)
+
+Please download the file id_loss.py from '/disentanglement/Losses/' and replace it with the old one in your loacl folder.
+
 # New update (2023/03/14)
 
 Please download the new model params from google drive and put them into the folder checkpoints:
