@@ -1,3 +1,21 @@
+def batch_generator(image_data, batch_size=32):
+    batch_data = []
+    for idx, data in enumerate(image_data):
+        if idx < 70000:
+            batch = data['img'][None]
+            torch.cuda.empty_cache()
+            id_images = batch.cuda()
+            attr_batch = batch*0.5+0.5
+            attr_images = attr_batch.cuda()
+
+            batch_data.append({'id_images': id_images, 'attr_images': attr_images})
+            if len(batch_data) == batch_size:
+                yield batch_data
+                batch_data = []
+    if batch_data:
+        yield batch_data
+
+
 # New update (2023/03/15)
 
 Please download the file id_loss.py from '/disentanglement/Losses/' and replace it with the old one in your loacl folder.
