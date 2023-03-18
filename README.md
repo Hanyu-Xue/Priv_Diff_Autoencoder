@@ -1,3 +1,15 @@
+# New update (2023/03/19)
+
+This update includes the resolution of the issue with backward gradient propagation, as well as a modification to the structure of the feature extractor network, which now utilizes an ID+Semantic encoder mode.
+
+To update, please follow the steps:
+
+1. Download the New model LatentMapperNew1.py from '/disentanglement/Models/'.
+
+2. Download the Pretrained parameter ("ID_VEC_ffhq70000_mlp.pt") from Google Drive: https://drive.google.com/file/d/10Ayh--HX_27UvOyUZDM_W-O9p0eqG6eL/view?usp=share_link
+
+3. Download the new script Train_ID.ipynb. (Train Loop 1 is already done and saved in 'ID_VEC_ffhq70000_mlp.pt'. Start with Train Loop 2.)
+
 # New update (2023/03/16)
 
 Please downlaod the LatentMapperNew from /disentanglement/Models/ and replace it with the old one in your loacl folder.
