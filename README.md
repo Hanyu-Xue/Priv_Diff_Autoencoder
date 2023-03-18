@@ -4,6 +4,70 @@ This update includes the resolution of the issue with backward gradient propagat
 
 To update, please follow the steps:
 
+0. Check the base.py. Make sure to comment out the line "with th.no_grad():":
+
+```
+    def ddim_sample_loop_progressive(
+        self,
+        model: Model,
+        shape=None,
+        noise=None,
+        clip_denoised=True,
+        denoised_fn=None,
+        cond_fn=None,
+        model_kwargs=None,
+        device=None,
+        progress=False,
+        eta=0.0,
+    ):
+        """
+        Use DDIM to sample from the model and yield intermediate samples from
+        each timestep of DDIM.
+
+        Same usage as p_sample_loop_progressive().
+        """
+        if device is None:
+            device = next(model.parameters()).device
+        if noise is not None:
+            img = noise
+        else:
+            assert isinstance(shape, (tuple, list))
+            img = th.randn(*shape, device=device)
+        indices = list(range(self.num_timesteps))[::-1]
+
+        if progress:
+            # Lazy import so that we don't depend on tqdm.
+            from tqdm.auto import tqdm
+
+            indices = tqdm(indices)
+
+        for i in indices:
+
+            if isinstance(model_kwargs, list):
+                # index dependent model kwargs
+                # (T-1, ..., 0)
+                _kwargs = model_kwargs[i]
+            else:
+                _kwargs = model_kwargs
+
+            t = th.tensor([i] * len(img), device=device)
+#             with th.no_grad():
+            out = self.ddim_sample(
+                model,
+                img,
+                t,
+                clip_denoised=clip_denoised,
+                denoised_fn=denoised_fn,
+                cond_fn=cond_fn,
+                model_kwargs=_kwargs,
+                eta=eta,
+            )
+            out['t'] = t
+            yield out
+            img = out["sample"]
+
+```
+
 1. Download the New model LatentMapperNew1.py from '/disentanglement/Models/'.
 
 2. Download the Pretrained parameter ("ID_VEC_ffhq70000_mlp.pt") from Google Drive: https://drive.google.com/file/d/10Ayh--HX_27UvOyUZDM_W-O9p0eqG6eL/view?usp=share_link
