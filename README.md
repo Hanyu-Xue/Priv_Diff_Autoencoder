@@ -1,3 +1,14 @@
+# New update (2023/04/25)
+
+This upate includes the new paper content:
+1.  Environment set up.
+2.  Experiments note book:
+> 2.1 Sample.ipynb
+> 2.2 Test_quality.ipynb
+
+`Note: Back up environment first`
+
+
 # New update (2023/03/19)
 
 This update includes the resolution of the issue with backward gradient propagation, as well as a modification to the structure of the feature extractor network, which now utilizes an ID+Semantic encoder mode.
