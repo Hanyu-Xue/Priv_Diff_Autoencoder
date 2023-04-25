@@ -1,7 +1,7 @@
 # New update (2023/04/25)
 
 This upate includes the new paper content:
-1.  Environment set up.
+1.  Environment set up + new model FaRL [https://github.com/FacePerceiver/FaRL].
 2.  Experiments note book:
 > 2.1 Sample.ipynb
 > 2.2 Test_quality.ipynb
