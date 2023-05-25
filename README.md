@@ -1,4 +1,7 @@
 # New update (2023/04/25)
+Add new file: FaRL_features_for_Pair.ipynb
+
+# New update (2023/04/25)
 
 This upate includes the new paper content:
 1.  Environment set up + new model FaRL [https://github.com/FacePerceiver/FaRL].
