@@ -1,5 +1,8 @@
-# New update (2023/06/04)
-Add new file for multi-gpu v0: run_anonymization-multi_GPU.ipynb
+# New update (2023/06/05)
+Add new file for fixing bugs: run_anonymization.ipynb
+
+<del> # New update (2023/06/04) </del>
+<del> Add new file for multi-gpu v0: run_anonymization-multi_GPU.ipynb <del>
 
 # New update (2023/05/29)
 Add new file: Evaluation.ipynb
