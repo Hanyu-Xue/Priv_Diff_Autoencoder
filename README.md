@@ -2,9 +2,9 @@
 
 This project aims to reproduce the experimental section of paper DIFFUSION DE-ID: Diffusion-Based Face Dataset Anonymization.
 
-| ![](imgs/Main_Structure1.eps)  |
+| ![](imgs/Main_Structure1.jpg)  |
 
-| ![](imgs/intro_figure1.eps)  |
+| ![](imgs/intro_figure1.jpg)  |
 
 ### Prerequisites
 
@@ -18,7 +18,7 @@ pip install -r requirements.txt
 
 Clone the repo to your work space.
 
-Please download the new model params from google drive and put them into the folder checkpoints:
+Please download the new model params from Google Drive and put them into the folder checkpoints:
 
 mlp model (https://drive.google.com/drive/folders/1MugUVHGn45eGklW7vJYvVjWm9eHLPRrr?usp=share_link)
 attr model (https://drive.google.com/drive/folders/1fH4W9zNcxdB33N7pM3ORy2z4nDIIRwE2?usp=share_link)
