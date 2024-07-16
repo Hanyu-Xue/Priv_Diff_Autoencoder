@@ -1,10 +1,14 @@
-## Purpose
+## DBFIA: Diffusion-Based Face Image Anonymization
 
 This project aims to reproduce the experimental section of paper DIFFUSION DE-ID: Diffusion-Based Face Dataset Anonymization.
 
-| ![](imgs/Main_Structure1.jpg)  |
+## Introduction
 
-| ![](imgs/intro_figure1.jpg)  |
+We propose a method for anonymizing faces using a diffusion model. Our approach retains the original facial attributes and produces anonymized images with high-quality image details. These attributes are essential when using anonymized images for downstream tasks.
+
+![The overview of face image privacy protection framework.](imgs/Main_Structure1.jpg) 
+
+![Visual quality compared to DeepPrivacy, CIAGAN, FALCO](imgs/intro_figure1.jpg)
 
 ### Prerequisites
 
